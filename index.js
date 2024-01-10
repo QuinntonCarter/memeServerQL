@@ -44,7 +44,7 @@ app.get("/", (req, res, next) => {
   next();
 });
 
-app.all("/graphql", createHandler({ schema }));
+app.use("/graphql", createHandler({ schema }));
 
 connectDB().then(() => {
   app.listen(port, () => {
