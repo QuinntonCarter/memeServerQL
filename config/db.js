@@ -10,7 +10,6 @@ const connectDB = async () => {
     console.log(
       `MongoDB Connected ${conn.connection.host}`.cyan.underline.bold
     );
-    return conn;
   } catch (error) {
     console.error("error connecting to mongodb", error);
     process.exit(1);
