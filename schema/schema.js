@@ -1,5 +1,5 @@
-const Meme = require("../models/meme.js");
-const {
+import Meme from "../models/meme.js";
+import {
   GraphQLObjectType,
   GraphQLID,
   GraphQLString,
@@ -7,7 +7,7 @@ const {
   GraphQLNonNull,
   GraphQLSchema,
   GraphQLError,
-} = require("graphql");
+} from "graphql";
 
 const MemeType = new GraphQLObjectType({
   name: "Meme",
@@ -63,7 +63,7 @@ const mutation = new GraphQLObjectType({
   },
 });
 
-module.exports = new GraphQLSchema({
+export default new GraphQLSchema({
   query: RootQuery,
   mutation,
 });

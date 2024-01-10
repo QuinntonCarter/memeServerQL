@@ -1,5 +1,5 @@
-const { Schema, model } = require("mongoose");
-const moment = require("moment");
+import { Schema, model } from "mongoose";
+import moment from "moment";
 
 const memeSchema = new Schema(
   {
@@ -26,4 +26,4 @@ const memeSchema = new Schema(
   { timestamps: true }
 );
 
-module.exports = model("Meme", memeSchema);
+export default model("Meme", memeSchema);

@@ -1,13 +1,13 @@
-const express = require("express");
+import express, { json } from "express";
 require("dotenv").config();
-const { createHandler } = require("graphql-http/lib/use/express");
-const colors = require("colors");
-const cors = require("cors");
+import { createHandler } from "graphql-http/lib/use/express";
+import colors from "colors";
+import cors from "cors";
 
 const app = express();
 
-const schema = require("./schema/schema.js");
-const connectDB = require("./config/db.js");
+import schema from "./schema/schema.js";
+import connectDB from "./config/db.js";
 const port = process.env.PORT || 8080;
 // const developmentEnv =
 //   process.env.NODE_ENV === "dev" && "http://localhost:3000";
@@ -30,7 +30,7 @@ app.use(
     ],
   })
 );
-app.use(express.json());
+app.use(json());
 
 // ignore favicon.ico request
 app.get("/favicon.ico", (req, res, next) => {
