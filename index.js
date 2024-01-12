@@ -15,7 +15,7 @@ app.use(
     origin: [
       process.env.CLIENT_URL,
       process.env.CLIENT_URL_WEB,
-      "http://localhost:3000",
+      "https://localhost:3000",
     ],
   })
 );
