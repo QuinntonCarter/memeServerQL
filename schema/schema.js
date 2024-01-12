@@ -1,4 +1,4 @@
-const { Meme } = require("../models/meme.js");
+const Meme = require("../models/meme.js");
 const {
   GraphQLObjectType,
   GraphQLID,
