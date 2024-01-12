@@ -9,13 +9,15 @@ const app = express();
 const schema = require("./schema/schema.js");
 const connectDB = require("./config/db.js");
 const port = process.env.PORT || 8080;
+const developmentEnv =
+  process.env.NODE_ENV === "dev" && "http://localhost:3000";
 
 app.use(
   cors({
     origin: [
       process.env.CLIENT_URL,
       process.env.CLIENT_URL_WEB,
-      "https://localhost:3000",
+      developmentEnv,
     ],
   })
 );
