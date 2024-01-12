@@ -30,8 +30,8 @@ const port = process.env.PORT || 8080;
 //     ],
 //   })
 // );
-app.use(cors());
-app.use(express.json());
+// app.use(cors());
+// app.use(express.json());
 // ignore favicon.ico request
 // app.get("/favicon.ico", (req, res, next) => {
 //   res.status(204);
@@ -41,7 +41,6 @@ app.use(express.json());
 // connectDB();
 app.get("/", (req, res, next) => {
   res.send("(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ Hello world, I am a server!");
-  next();
 });
 
 // app.all("/graphql", createHandler({ schema }));
